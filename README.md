@@ -123,11 +123,11 @@ python manage.py test accounts banking payments -v 2
 ```json
 POST /api/accounts/register/
 {
-    "username": "john",
-    "email": "john@example.com",
+    "username": "dhananjay",
+    "email": "dhananjay@example.com",
     "password": "mypassword123",
-    "first_name": "John",
-    "last_name": "Doe",
+    "first_name": "Dhananjay",
+    "last_name": "Jagtap",
     "phone": "9876543210"
 }
 ```
@@ -138,10 +138,10 @@ POST /api/accounts/register/
     "message": "User registered successfully.",
     "user": {
         "id": "a1b2c3d4-...",
-        "username": "john",
-        "email": "john@example.com",
-        "first_name": "John",
-        "last_name": "Doe",
+        "username": "dhananjay",
+        "email": "dhananjay@example.com",
+        "first_name": "Dhananjay",
+        "last_name": "Jagtap",
         "phone": "9876543210",
         "date_of_birth": null,
         "date_joined": "2025-01-15T10:30:00Z"
@@ -155,7 +155,7 @@ POST /api/accounts/register/
 ```json
 POST /api/accounts/login/
 {
-    "username": "john",
+    "username": "dhananjay",
     "password": "mypassword123"
 }
 ```
@@ -197,10 +197,10 @@ Authorization: Bearer <access_token>
 ```json
 {
     "id": "a1b2c3d4-...",
-    "username": "john",
+    "username": "dhananjay",
     "email": "john@example.com",
-    "first_name": "John",
-    "last_name": "Doe",
+    "first_name": "Dhananjay",
+    "last_name": "Jagtap",
     "phone": "9876543210",
     "date_of_birth": null,
     "date_joined": "2025-01-15T10:30:00Z"
@@ -214,7 +214,7 @@ Authorization: Bearer <access_token>
 PATCH /api/accounts/update/
 Authorization: Bearer <access_token>
 {
-    "first_name": "Johnny",
+    "first_name": "Vishal',
     "phone": "1234567890"
 }
 ```
@@ -225,10 +225,10 @@ Authorization: Bearer <access_token>
     "message": "Profile updated successfully.",
     "user": {
         "id": "a1b2c3d4-...",
-        "username": "john",
-        "email": "john@example.com",
-        "first_name": "Johnny",
-        "last_name": "Doe",
+        "username": "dhananjay",
+        "email": "dhananjay@example.com",
+        "first_name": "Vishal"'
+        "last_name": "Jagtap",
         "phone": "1234567890",
         "date_of_birth": null,
         "date_joined": "2025-01-15T10:30:00Z"
@@ -254,7 +254,7 @@ Authorization: Bearer <access_token>
     "message": "Bank account created successfully.",
     "account": {
         "id": "e5f6g7h8-...",
-        "owner": "john",
+        "owner": "dhananjay",
         "account_number": "482937561034",
         "bank_name": "State Bank",
         "account_type": "savings",
@@ -283,7 +283,7 @@ Authorization: Bearer <access_token>
     "message": "Account topped up successfully.",
     "account": {
         "id": "e5f6g7h8-...",
-        "owner": "john",
+        "owner": "dhananjay",
         "account_number": "482937561034",
         "bank_name": "State Bank",
         "account_type": "savings",
@@ -315,7 +315,7 @@ Authorization: Bearer <access_token>
     "transaction": {
         "id": "i9j0k1l2-...",
         "reference_id": "TXN1705312500123ABC",
-        "sender_username": "john",
+        "sender_username": "dhananjay",
         "sender_account_number": "482937561034",
         "receiver_account_number": "739281456023",
         "amount": "1500.00",
@@ -338,7 +338,7 @@ Authorization: Bearer <access_token>
     "transaction": {
         "id": "m3n4o5p6-...",
         "reference_id": "TXN1705312600456DEF",
-        "sender_username": "john",
+        "sender_username": "dhananjay",
         "sender_account_number": "482937561034",
         "receiver_account_number": "000000000000",
         "amount": "1500.00",
@@ -372,7 +372,7 @@ Authorization: Bearer <access_token>
         {
             "id": "i9j0k1l2-...",
             "reference_id": "TXN1705312500123ABC",
-            "sender_username": "john",
+            "sender_username": "dhananjay",
             "sender_account_number": "482937561034",
             "receiver_account_number": "739281456023",
             "amount": "1500.00",
